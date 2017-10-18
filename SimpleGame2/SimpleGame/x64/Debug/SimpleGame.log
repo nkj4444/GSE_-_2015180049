@@ -1,0 +1,7 @@
+﻿  SceneMgr.cpp
+c:\users\user\desktop\nkj\simplegame2\simplegame\scenemgr.h(13): warning C4101: 'm_objects' :참조되지 않은 지역 변수입니다.
+  코드를 생성하고 있습니다...
+  건너뛰고 있습니다... (관련된 변경 내용 없음)
+  SimpleGame.cpp
+  SimpleGame.vcxproj -> C:\Users\user\Desktop\nkj\SimpleGame2\x64\Debug\SimpleGame.exe
+  SimpleGame.vcxproj -> C:\Users\user\Desktop\nkj\SimpleGame2\x64\Debug\SimpleGame.pdb (Partial PDB)
