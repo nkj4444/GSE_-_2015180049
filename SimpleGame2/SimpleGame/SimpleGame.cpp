@@ -17,8 +17,8 @@ but WITHOUT ANY WARRANTY.
 #include "Renderer.h"
 #include "SceneMgr.h"
 
-Renderer *g_Renderer = NULL;
-
+//Renderer *g_Renderer = NULL;
+SceneMgr *g_SceneMgr = NULL;
 
 //Object Ob(0,0,0,20,1,1,1,1);
 
@@ -31,14 +31,15 @@ void RenderScene(void)
 	//g_Renderer->DrawSolidRect(0, 0, 0, 4, 1, 0, 1, 1);
 	
 	//g_Renderer->DrawSolidRect(Ob.x, Ob.y, Ob.z, Ob.size, Ob.r, Ob.g, Ob.b, Ob.a);
-
+	
 	glutSwapBuffers();
 }
 
 void Idle(void)
 {
-	RenderScene();
+	//RenderScene();
 	
+	g_SceneMgr->RenderScene();
 	//Ob.Update();
 	
 	
@@ -71,7 +72,7 @@ int main(int argc, char **argv)
 	glutCreateWindow("Game Software Engineering KPU");
 
 	
-
+    
 	glewInit();
 	if (glewIsSupported("GL_VERSION_3_0"))
 	{
@@ -81,13 +82,10 @@ int main(int argc, char **argv)
 	{
 		std::cout << "GLEW 3.0 not supported\n ";
 	}
-
+    
 	// Initialize Renderer
-	g_Renderer = new Renderer(500, 500);
-	if (!g_Renderer->IsInitialized())
-	{
-		std::cout << "Renderer could not be initialized.. \n";
-	}
+	//g_Renderer = new Renderer(500, 500);
+	g_SceneMgr = new SceneMgr(500,500);
 
 	glutDisplayFunc(RenderScene);
 	glutIdleFunc(Idle);
@@ -97,7 +95,7 @@ int main(int argc, char **argv)
 
 	glutMainLoop();
 
-	delete g_Renderer;
+	//delete g_Renderer;
 
     return 0;
 }

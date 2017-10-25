@@ -1,7 +1,8 @@
 ﻿  SceneMgr.cpp
-c:\users\user\desktop\nkj\simplegame2\simplegame\scenemgr.h(13): warning C4101: 'm_objects' :참조되지 않은 지역 변수입니다.
-  코드를 생성하고 있습니다...
-  건너뛰고 있습니다... (관련된 변경 내용 없음)
-  SimpleGame.cpp
-  SimpleGame.vcxproj -> C:\Users\user\Desktop\nkj\SimpleGame2\x64\Debug\SimpleGame.exe
-  SimpleGame.vcxproj -> C:\Users\user\Desktop\nkj\SimpleGame2\x64\Debug\SimpleGame.pdb (Partial PDB)
+c:\users\user\desktop\gse\simplegame2\simplegame\scenemgr.h(16): warning C4200: 비표준 확장이 사용됨: 구조체/공용 구조체의 배열 크기가 0입니다.
+  c:\users\user\desktop\gse\simplegame2\simplegame\scenemgr.h(16): note: 이 멤버는 기본값으로 설정된 생성자 또는 복사/이동 대입 연산자에서 무시됩니다.
+c:\users\user\desktop\gse\simplegame2\simplegame\scenemgr.h(24): warning C4101: 'm_objects' :참조되지 않은 지역 변수입니다.
+c:\users\user\desktop\gse\simplegame2\simplegame\scenemgr.cpp(27): error C2819: 'Object' 형식에 오버로드된 멤버 'operator ->'가 없습니다.
+  c:\users\user\desktop\gse\simplegame2\simplegame\object.h(3): note: 'Object' 선언을 참조하십시오.
+  c:\users\user\desktop\gse\simplegame2\simplegame\scenemgr.cpp(27): note: 대신 '.'을(를) 사용하려고 했습니까?
+c:\users\user\desktop\gse\simplegame2\simplegame\scenemgr.cpp(27): error C2232: '->Object::x': 왼쪽 피연산자에 'class' 형식이 있습니다. '.'를 사용하십시오.
