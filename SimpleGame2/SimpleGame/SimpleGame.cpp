@@ -26,20 +26,22 @@ void RenderScene(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glClearColor(0.0f, 0.3f, 0.3f, 1.0f);
-
+    //g_SceneMgr->RenderScene();
 	// Renderer Test
 	//g_Renderer->DrawSolidRect(0, 0, 0, 4, 1, 0, 1, 1);
 	
 	//g_Renderer->DrawSolidRect(Ob.x, Ob.y, Ob.z, Ob.size, Ob.r, Ob.g, Ob.b, Ob.a);
+	g_SceneMgr->UpdateAll();
+	g_SceneMgr->DrawObject();
 	
 	glutSwapBuffers();
 }
 
 void Idle(void)
 {
-	//RenderScene();
+	RenderScene();
 	
-	g_SceneMgr->RenderScene();
+	
 	//Ob.Update();
 	
 	
@@ -70,7 +72,7 @@ int main(int argc, char **argv)
 	glutInitWindowPosition(0, 0);
 	glutInitWindowSize(500, 500);
 	glutCreateWindow("Game Software Engineering KPU");
-
+	
 	
     
 	glewInit();
@@ -86,7 +88,7 @@ int main(int argc, char **argv)
 	// Initialize Renderer
 	//g_Renderer = new Renderer(500, 500);
 	g_SceneMgr = new SceneMgr(500,500);
-
+	g_SceneMgr->ObjectMaking();// 오브젝트생성
 	glutDisplayFunc(RenderScene);
 	glutIdleFunc(Idle);
 	glutKeyboardFunc(KeyInput);

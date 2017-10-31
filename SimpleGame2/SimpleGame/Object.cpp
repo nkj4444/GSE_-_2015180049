@@ -2,13 +2,29 @@
 #include "Object.h"
 
 
-void  Object::Update() {
+	int x_incline = 1;
+	int y_incline = 2;
 
-	elapsedTime = 0.1;
-	if (x >= 250) {
-		x = -250;
+
+void Object::Update() {
+	
+	elapsedTime = 3;
+
+
+	if (x > 250) {
+		x_incline = -x_incline;
+	}
+	if (y > 250 ) {
+		y_incline = -y_incline;
+	}
+	if (x < -250) {
+		x_incline = -x_incline;
+	}
+	if (y < -250) {
+		y_incline = -y_incline;
 	}
 
-	x += 5;
-
+	x = x + x_incline;
+	y = y + y_incline;
+	
 }

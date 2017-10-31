@@ -13,24 +13,22 @@ class SceneMgr
 {
 private:
 	Renderer *m_Renderer = NULL;
-	Object m_object[];
+	Object *m_object[];
 
 public:
-	void Update();
-	void RenderScene();
+	void UpdateAll();
+	void ObjectMaking();
+	void DrawObject();
 
 
 	SceneMgr() {
-		Object *m_objects[MAX_OBJECTS_COUNT];
+		Object *m_object[MAX_OBJECTS_COUNT];
 		
 		
 	}
 	SceneMgr(int _W,int _H) {
-
-
 		m_Renderer = new Renderer(_W, _H);
 
-		
 
 	}
 	

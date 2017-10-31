@@ -9,6 +9,7 @@ public:
 	void Update();
 	double elapsedTime;
 
+
 	Object() {
 		x = 0;
 		y = 0;
@@ -29,6 +30,7 @@ public:
 		b = _b;
 		a = _a;
 	}
+	Object(int a, int b);
 	
 };
 
