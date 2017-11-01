@@ -41,7 +41,7 @@ void Idle(void)
 {
 	RenderScene();
 	
-	
+	//dddddd
 	//Ob.Update();
 	
 	
